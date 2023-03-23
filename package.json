@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "name": "playwright-scraper",
+  "version": "1.0.0",
+  "main": "crawlee.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crawlee": "^3.3.0",
+    "playwright": "^1.31.2"
+  },
+  "devDependencies": {
+    "expect-playwright": "^0.8.0"
+  },
+  "description": ""
+}
