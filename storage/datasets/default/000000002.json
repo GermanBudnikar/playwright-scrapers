@@ -1,0 +1,178 @@
+{
+	"revs": [
+		{
+			"user": "Juliana",
+			"date": "Avaliou em: 27 de fevereiro de 2023",
+			"title": "Muito bom",
+			"stars": "8,0"
+		},
+		{
+			"user": "Newton",
+			"date": "Avaliou em: 27 de fevereiro de 2023",
+			"title": "Satisfatório",
+			"stars": "6,0"
+		},
+		{
+			"user": "Lucas",
+			"date": "Avaliou em: 27 de fevereiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Edgar",
+			"date": "Avaliou em: 27 de fevereiro de 2023",
+			"title": "“Bom, mas não vale o preço que cobra.”",
+			"positive": "Todos os funcionários são muito bons; o hotel tem uma localização muito boa; encontramos bons restaurantes e comercios na região.",
+			"negative": "A diária do estacionamento é R$ 45,00; cheiro de comida no corredor que da acesso aos elevadores; café da Manhã não tem variedade, enjoei de comer a mesma coisa por 10 dias.",
+			"stars": "5,0"
+		},
+		{
+			"user": "Ludmila",
+			"date": "Avaliou em: 27 de fevereiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Anne",
+			"date": "Avaliou em: 26 de fevereiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Rodrigo",
+			"date": "Avaliou em: 26 de fevereiro de 2023",
+			"title": "“Excelente localização com atendimento, café da manhã e comodidades muito boas.”",
+			"positive": "Excelente localização, café da manhã e atendimento muito bom e boas comodidades.",
+			"negative": "Preço um pouco elevado.",
+			"stars": "10"
+		},
+		{
+			"user": "Mariana",
+			"date": "Avaliou em: 26 de fevereiro de 2023",
+			"title": "Muito bom",
+			"positive": "o Café da manhã e a localização",
+			"negative": "o quarto é barulhento, no andar de cima parecia que tinha bicho e crianças pulando a noite toda e de manha bem cedo, Sem contar do barulho da rua. as roupas de cama poderiam ser Mais macias, assim como as toalhas.",
+			"stars": "8,0"
+		},
+		{
+			"user": "Savio",
+			"date": "Avaliou em: 25 de fevereiro de 2023",
+			"title": "“Otimo.”",
+			"positive": "Poderia ser melhor com variedades de frutas.",
+			"stars": "10"
+		},
+		{
+			"user": "Kesya",
+			"date": "Avaliou em: 25 de fevereiro de 2023",
+			"title": "Excepcional",
+			"positive": "localização incrível, ambiente moderno, quarto super aconchegante, atendimento 24hrs disponível e café da manhã delicioso.",
+			"stars": "10"
+		},
+		{
+			"user": "Silvia",
+			"date": "Avaliou em: 25 de fevereiro de 2023",
+			"title": "Muito bom",
+			"stars": "8,0"
+		},
+		{
+			"user": "Canarim",
+			"date": "Avaliou em: 24 de fevereiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Luciara",
+			"date": "Avaliou em: 23 de fevereiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Maria",
+			"date": "Avaliou em: 23 de fevereiro de 2023",
+			"title": "Muito bom",
+			"stars": "8,0"
+		},
+		{
+			"user": "Carlos",
+			"date": "Avaliou em: 23 de fevereiro de 2023",
+			"title": "Fantástico",
+			"positive": "Café da manhã e conforto do apartamento",
+			"stars": "9,0"
+		},
+		{
+			"user": "Lisia",
+			"date": "Avaliou em: 23 de fevereiro de 2023",
+			"title": "Muito bom",
+			"positive": "Localização, quatro amplo, bom café da manhã com opções sem glúten e sem lactose,  boa e lindas as instalaçõe e decoração. Ótimo custo beneficio.",
+			"negative": "Tinha bastabte mofo no teto do banheiro.",
+			"stars": "8,0"
+		},
+		{
+			"user": "Niehues",
+			"date": "Avaliou em: 23 de fevereiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Marconi",
+			"date": "Avaliou em: 22 de fevereiro de 2023",
+			"title": "“Indicaria este hotel”",
+			"positive": "O hotel é muito bem localizado. Fácil acesso aos principais pontos turísticos da região central. Para conhecer as praias do leste e do norte recomendo o tour com o Floripa by bus. O café-da-manhã é excelente. Os funcionários educados. Quartos confortáveis e limpos.",
+			"negative": "Apenas algumas infiltrações na parede. Mas nada que n possa ser resolvido e não apaga os pontos positivos do hotel. \nDeveria fazer parceria com a Floripa by bus para o ônibus passar pelo hotel.",
+			"stars": "10"
+		},
+		{
+			"user": "Augusto",
+			"date": "Avaliou em: 22 de fevereiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Rafael",
+			"date": "Avaliou em: 22 de fevereiro de 2023",
+			"title": "Muito bom",
+			"positive": "Boa localizaçao para quem vai ficar no centro.",
+			"negative": "Café da manhã podia ter menos coisas e mais qualidade. Também deixou a desejar na limpeza, corredores da escada (saida de emergência) fedia comida podre, vários pratos e bacias no chão). Estacionamento é pago e o você precisa deixar a chave com o hotel.",
+			"stars": "8,0"
+		},
+		{
+			"user": "Celso",
+			"date": "Avaliou em: 21 de fevereiro de 2023",
+			"title": "Bom",
+			"positive": "Preço alto demais para o nível do hotel.",
+			"negative": "Do preço.",
+			"stars": "7,0"
+		},
+		{
+			"user": "Francisco",
+			"date": "Avaliou em: 20 de fevereiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Lucas",
+			"date": "Avaliou em: 20 de fevereiro de 2023",
+			"title": "Decepcionante",
+			"positive": "café da manhã",
+			"negative": "quarto",
+			"stars": "4,0"
+		},
+		{
+			"user": "Taciane",
+			"date": "Avaliou em: 18 de fevereiro de 2023",
+			"title": "“superou as expectativas”",
+			"positive": "tudo",
+			"negative": "quanto espaçoso",
+			"stars": "10"
+		},
+		{
+			"user": "Dani",
+			"date": "Avaliou em: 18 de fevereiro de 2023",
+			"title": "Excepcional",
+			"positive": "Tudo",
+			"negative": "Nada",
+			"stars": "10"
+		}
+	],
+	"commitCount": 25
+}

@@ -1,0 +1,9 @@
+{
+	"id": "YP2L1xHU4lnSuhW",
+	"json": "{\"id\":\"YP2L1xHU4lnSuhW\",\"url\":\"https://www.booking.com/reviews/br/hotel/faial.pt-br.html?label=gen173nr-1FCA0oIEIFZmFpYWxILVgEaCCIAQGYAS24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AsLmjKEGwAIB0gIkNDFjYTA0Y2UtMDc0YS00ZGQzLTk5OTgtMzAwMjJmZTFkODYz2AIF4AIB&sid=a8213420eb4ca1b8392c53c4d3b681fb&r_lang=pt&customer_type=total&order=completed_desc\",\"loadedUrl\":\"https://www.booking.com/reviews/br/hotel/faial.pt-br.html?label=gen173nr-1FCA0oIEIFZmFpYWxILVgEaCCIAQGYAS24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AsLmjKEGwAIB0gIkNDFjYTA0Y2UtMDc0YS00ZGQzLTk5OTgtMzAwMjJmZTFkODYz2AIF4AIB&sid=a8213420eb4ca1b8392c53c4d3b681fb&r_lang=pt&customer_type=total&order=completed_desc\",\"uniqueKey\":\"https://www.booking.com/reviews/br/hotel/faial.pt-br.html?customer_type=total&label=gen173nr-1FCA0oIEIFZmFpYWxILVgEaCCIAQGYAS24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AsLmjKEGwAIB0gIkNDFjYTA0Y2UtMDc0YS00ZGQzLTk5OTgtMzAwMjJmZTFkODYz2AIF4AIB&order=completed_desc&r_lang=pt&sid=a8213420eb4ca1b8392c53c4d3b681fb\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-29T04:36:10.954Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.booking.com/reviews/br/hotel/faial.pt-br.html?customer_type=total&label=gen173nr-1FCA0oIEIFZmFpYWxILVgEaCCIAQGYAS24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AsLmjKEGwAIB0gIkNDFjYTA0Y2UtMDc0YS00ZGQzLTk5OTgtMzAwMjJmZTFkODYz2AIF4AIB&order=completed_desc&r_lang=pt&sid=a8213420eb4ca1b8392c53c4d3b681fb",
+	"url": "https://www.booking.com/reviews/br/hotel/faial.pt-br.html?label=gen173nr-1FCA0oIEIFZmFpYWxILVgEaCCIAQGYAS24ARfIAQzYAQHoAQH4AQKIAgGoAgO4AsLmjKEGwAIB0gIkNDFjYTA0Y2UtMDc0YS00ZGQzLTk5OTgtMzAwMjJmZTFkODYz2AIF4AIB&sid=a8213420eb4ca1b8392c53c4d3b681fb&r_lang=pt&customer_type=total&order=completed_desc"
+}

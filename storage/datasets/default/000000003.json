@@ -1,0 +1,169 @@
+{
+	"revs": [
+		{
+			"user": "Elizeu",
+			"date": "Avaliou em: 23 de janeiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Luiza",
+			"date": "Avaliou em: 23 de janeiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Richard",
+			"date": "Avaliou em: 22 de janeiro de 2023",
+			"title": "“Hotel confortável no centro de Floripa”",
+			"positive": "conforto das camas e quarto amplo:",
+			"negative": "No primeiro dia as toalhas não eram boas. poderiam melhorar isolamento acústico.",
+			"stars": "8,0"
+		},
+		{
+			"user": "Marcos",
+			"date": "Avaliou em: 22 de janeiro de 2023",
+			"title": "“boa”",
+			"positive": "ótima localização, funcionários atenciosos",
+			"negative": "limpeza de quarto deixou a desejar, mas de modo geral foi bom",
+			"stars": "8,0"
+		},
+		{
+			"user": "Ana",
+			"date": "Avaliou em: 22 de janeiro de 2023",
+			"title": "“Estadia muito boa”",
+			"positive": "O hotel foi reformado, os quartos são amplos e bonitos. Café da manhã bom, e o atendimento dos funcionários é ótimo.",
+			"negative": "A falta de vista me incomodou bastante, apesar de ter duas janelas, não existe iluminação pois o hotel está inserido entre outros prédios antigos do centro. Não era possível sequer abrir as cortinas, as janelas vizinhas ficavam a poucos metros. O banheiro também é bem simples, mas ok.",
+			"stars": "8,0"
+		},
+		{
+			"user": "Lidiane",
+			"date": "Avaliou em: 21 de janeiro de 2023",
+			"title": "Aceitável",
+			"positive": "Do local",
+			"negative": "O manobrista quebrou o para choque do meu carro tentando colocar em frente ao hotel onde meu carro é baixa a frente dele reclamei e não me pagaram por isso.",
+			"stars": "5,0"
+		},
+		{
+			"user": "Rubens",
+			"date": "Avaliou em: 21 de janeiro de 2023",
+			"title": "Bom",
+			"stars": "7,0"
+		},
+		{
+			"user": "Joao",
+			"date": "Avaliou em: 20 de janeiro de 2023",
+			"title": "Muito bom",
+			"stars": "8,0"
+		},
+		{
+			"user": "Flavia",
+			"date": "Avaliou em: 20 de janeiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Marcelo",
+			"date": "Avaliou em: 20 de janeiro de 2023",
+			"title": "Fantástico",
+			"negative": "cama bastante usadas, sugiro a troca das mesmas .",
+			"stars": "9,0"
+		},
+		{
+			"user": "Adinezia",
+			"date": "Avaliou em: 19 de janeiro de 2023",
+			"title": "“8”",
+			"positive": "Do atendimento.",
+			"negative": "O valor da diária.do",
+			"stars": "9,0"
+		},
+		{
+			"user": "Karine",
+			"date": "Avaliou em: 19 de janeiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Danilo",
+			"date": "Avaliou em: 19 de janeiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Ivanise",
+			"date": "Avaliou em: 19 de janeiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Emanuela",
+			"date": "Avaliou em: 18 de janeiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Alexandre",
+			"date": "Avaliou em: 18 de janeiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Anônimo",
+			"date": "Avaliou em: 18 de janeiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Andre",
+			"date": "Avaliou em: 17 de janeiro de 2023",
+			"title": "Muito bom",
+			"stars": "8,0"
+		},
+		{
+			"user": "Estela",
+			"date": "Avaliou em: 17 de janeiro de 2023",
+			"title": "Bom",
+			"stars": "7,0"
+		},
+		{
+			"user": "Osni",
+			"date": "Avaliou em: 17 de janeiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Katlin",
+			"date": "Avaliou em: 16 de janeiro de 2023",
+			"title": "Fantástico",
+			"stars": "9,0"
+		},
+		{
+			"user": "Anônimo",
+			"date": "Avaliou em: 16 de janeiro de 2023",
+			"title": "“custo benefício”",
+			"positive": "os funcionários",
+			"negative": "a localização não era muito boa",
+			"stars": "8,0"
+		},
+		{
+			"user": "Selem",
+			"date": "Avaliou em: 16 de janeiro de 2023",
+			"title": "Fantástico",
+			"negative": "chuveiro com pouca pressão de água. \nteve apagão de energia no checkout e não tinha gerador,",
+			"stars": "9,0"
+		},
+		{
+			"user": "Andrea",
+			"date": "Avaliou em: 15 de janeiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		},
+		{
+			"user": "Nicolás",
+			"date": "Avaliou em: 15 de janeiro de 2023",
+			"title": "Excepcional",
+			"stars": "10"
+		}
+	],
+	"commitCount": 25
+}

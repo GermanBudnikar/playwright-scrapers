@@ -1,17 +1,16 @@
 // router.js
 import { createPlaywrightRouter, Dataset, Request } from 'crawlee';
 
-export const router = createPlaywrightRouter();
+export const routerGoogle = createPlaywrightRouter();
+export const routerBooking = createPlaywrightRouter();
 
+var title;
 
-
-router.use(async ({ page }) => {
-    const title = await page.title()
-    console.log(title);
+routerGoogle.use(async ({ page }) => {
+    title = await page.title();
 })
 
-router.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
-    let revLocator;
+routerGoogle.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
 
     await page
     .getByRole('option')
@@ -32,7 +31,6 @@ router.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
             const data = await page.getByText('um mês atrás').count();
             if(data >= 1) {
                 const locator = page.locator('span.Jmi7d');
-                revLocator = page.locator('div.Svr5cf');
                 for (const li of await locator.all())
                     await li.click();
             }
@@ -51,34 +49,95 @@ router.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
 
     console.log('Reviews count2:', lerMaisCount);
 
-    const locator = revLocator;
-    const reviews = await locator.evaluateAll((reviewsData) => {
+    const reviews = await page.locator('div.Svr5cf').evaluateAll((reviewsData) => {
         return reviewsData.map(data => {
-            const user = data.querySelector('a.DHIhE').innerText; 
-            const date = data.querySelector('span.iUtr1').innerText;
-            const review = data.querySelector('div.K7oBsc').innerText;
-            console.log(review);
-            const stars = data.querySelector('div.GDWaad').innerText;
+            if(data.querySelector('div.STQFb.eoY5cb').firstChild.innerText.length) {
+                const user = data.querySelector('a.DHIhE').innerText; 
+                const date = data.querySelector('span.iUtr1').innerText;
+                const review = data.querySelector('div.STQFb.eoY5cb').firstChild.innerText;
+                const stars = data.querySelector('div.GDWaad').innerText;
 
-            return {
-                user: user,
-                date: date,
-                review: review,
-                stars: stars,
-            };
+                var reviewFiltered;
+                reviewFiltered = review.replace('(Tradução do Google) ',"");
+                reviewFiltered = review.replace('\n',"");
+
+                return {
+                    user: user,
+                    date: date,
+                    review: reviewFiltered,
+                    stars: stars,
+                };
+            }
         });
     });
 
     console.log('Reviews count:', reviews.length);
     
     const revs = reviews;
-    const commitCount = reviews.length;
+    var filtered = revs.filter(function (el) {
+        return el != null;
+    });
+    const commitCount = filtered.length;
     await Dataset.pushData({
-        revs,
+        filtered,
         commitCount,
     });
 
-    await page.waitForTimeout(50000);
-
     //await crawler.addRequests(requests);
 })
+
+routerBooking.use(async ({ page }) => {
+    title = await page.title();
+})
+
+routerBooking.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
+
+    let nextpagecount = 0;
+    while (nextpagecount == 0) { 
+        const nextPageLoc = page.locator('p.page_link.review_next_page');
+        await nextPageLoc.first().waitFor();
+        nextpagecount = await page.locator('p.review_item_date').filter({ hasText: 'dezembro de 2022'}).count();
+        console.log(nextpagecount);
+
+        const reviews = await page.locator('li.review_item.clearfix').evaluateAll((reviewsData) => {
+            return reviewsData.map(data => {
+
+                const user = data.querySelector('p.reviewer_name').innerText; 
+                const date = data.querySelector('p.review_item_date').innerText;
+                const title = data.querySelector('div.review_item_header_content_container').innerText;
+                let positive;
+                if (data.querySelector('p.review_pos ')) {
+                    positive = data.querySelector('p.review_pos ').innerText;
+                }
+                let negative;
+                if (data.querySelector('p.review_neg ')) {
+                    negative = data.querySelector('p.review_neg ').innerText;
+                }
+                const stars = data.querySelector('span.review-score-badge').innerText;
+
+                return {
+                    user: user,
+                    date: date,
+                    title: title,
+                    positive: positive,
+                    negative: negative,
+                    stars: stars,
+                };
+
+            });
+        });
+
+        console.log('Reviews count:', reviews.length);
+    
+        const revs = reviews;
+
+        const commitCount = revs.length;
+        await Dataset.pushData({
+            revs,
+            commitCount,
+        });
+
+        await nextPageLoc.first().click();
+    }
+})
+
