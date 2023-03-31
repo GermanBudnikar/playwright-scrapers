@@ -3,6 +3,7 @@ import { createPlaywrightRouter, Dataset, Request } from 'crawlee';
 
 export const routerGoogle = createPlaywrightRouter();
 export const routerBooking = createPlaywrightRouter();
+export const routerTripadvisor = createPlaywrightRouter();
 
 var title;
 
@@ -34,7 +35,7 @@ routerGoogle.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
                 for (const li of await locator.all())
                     await li.click();
             }
-            
+           
             return data >= 1;
         },
     });
@@ -52,7 +53,7 @@ routerGoogle.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
     const reviews = await page.locator('div.Svr5cf').evaluateAll((reviewsData) => {
         return reviewsData.map(data => {
             if(data.querySelector('div.STQFb.eoY5cb').firstChild.innerText.length) {
-                const user = data.querySelector('a.DHIhE').innerText; 
+                const user = data.querySelector('a.DHIhE').innerText;
                 const date = data.querySelector('span.iUtr1').innerText;
                 const review = data.querySelector('div.STQFb.eoY5cb').firstChild.innerText;
                 const stars = data.querySelector('div.GDWaad').innerText;
@@ -72,7 +73,7 @@ routerGoogle.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
     });
 
     console.log('Reviews count:', reviews.length);
-    
+   
     const revs = reviews;
     var filtered = revs.filter(function (el) {
         return el != null;
@@ -93,7 +94,7 @@ routerBooking.use(async ({ page }) => {
 routerBooking.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
 
     let nextpagecount = 0;
-    while (nextpagecount == 0) { 
+    while (nextpagecount == 0) {
         const nextPageLoc = page.locator('p.page_link.review_next_page');
         await nextPageLoc.first().waitFor();
         nextpagecount = await page.locator('p.review_item_date').filter({ hasText: 'dezembro de 2022'}).count();
@@ -102,7 +103,7 @@ routerBooking.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
         const reviews = await page.locator('li.review_item.clearfix').evaluateAll((reviewsData) => {
             return reviewsData.map(data => {
 
-                const user = data.querySelector('p.reviewer_name').innerText; 
+                const user = data.querySelector('p.reviewer_name').innerText;
                 const date = data.querySelector('p.review_item_date').innerText;
                 const title = data.querySelector('div.review_item_header_content_container').innerText;
                 let positive;
@@ -128,7 +129,7 @@ routerBooking.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
         });
 
         console.log('Reviews count:', reviews.length);
-    
+   
         const revs = reviews;
 
         const commitCount = revs.length;
@@ -141,3 +142,79 @@ routerBooking.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
     }
 })
 
+routerTripadvisor.use(async ({ page }) => {
+    title = await page.title();
+})
+
+routerTripadvisor.addDefaultHandler(async ({ page, infiniteScroll, crawler }) => {
+
+    /*let cookies = true;
+    while (cookies) {
+        let button = page.getByRole('button').filter({ hasText: 'Aceito' });
+        const count = await button.count();
+        if(count) {
+            await button.click();
+            cookies = false;
+        }
+        else {
+            cookies = false;
+        }
+    }*/
+
+    /*let button = page.getByRole('button').filter({ hasText: 'Aceito' });
+    const visible = await button.isVisible();
+    if(visible) await button.click();*/
+    //await page.locator('div.ot-sdk-row').first().click();
+    /*await button.count().then((value) => {
+        if(value > 0) {
+            await button.click();
+        }
+    })*/
+
+    await page.getByRole('button').filter({ hasText: 'Aceito' }).click();
+
+    //await page.waitForTimeout(5500);
+
+    let nextpagecount = 0;
+    while (nextpagecount == 0) {
+        const nextPageLoc = page.locator('a.ui_button.nav.next.primary ');
+        await nextPageLoc.first().waitFor();
+        nextpagecount = await page.locator('div.cRVSd').filter({ hasText: 'dez. de 2022'}).count();
+        console.log(nextpagecount);
+
+        const lerMais = page.locator('div.TnInx');
+        await lerMais.first().click();
+
+        const reviews = await page.locator('div.YibKl').evaluateAll((reviewsData) => {
+            return reviewsData.map(data => {
+
+                const user = data.querySelector('a.ui_header_link.uyyBf').innerText;
+                const date = data.querySelector('a.ui_header_link.uyyBf').innerText;
+                const title = data.querySelector('div.KgQgP').innerText;
+                //const review = data.querySelector('div.QewHA').innerText;
+                //const stars = data.querySelector('span.review-score-badge').innerText;
+
+                return {
+                    user: user,
+                    date: date,
+                    title: title,
+                    //review: review,
+                    //stars: stars,
+                };
+
+            });
+        });
+
+        console.log('Reviews count:', reviews.length);
+   
+        const revs = reviews;
+
+        const commitCount = revs.length;
+        await Dataset.pushData({
+            revs,
+            commitCount,
+        });
+
+        await nextPageLoc.first().click();
+    }
+})
